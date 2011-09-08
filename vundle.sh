@@ -2,4 +2,4 @@
 
 git submodule init
 git submodule update
-vi +BundleInstall
+vim +BundleInstall
