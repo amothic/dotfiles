@@ -13,7 +13,7 @@ local GREEN=$'%{\e[1;32m%}'
 local PINK=$'%{\e[1;35m%}'
 local DEFAULT=$'%{\e[1;m%}'
 
-PROMPT="$GREEN%n @ %m$DEFAULT %% "
+PROMPT="$GREEN%n @ %m$DEFAULT $ "
 RPROMPT="[$PINK%~$DEFAULT]"
 setopt PROMPT_SUBST
 
