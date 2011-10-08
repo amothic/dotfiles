@@ -1,0 +1,4 @@
+# This is Mercurial configuration file.
+
+[ui]
+username = Daichi Toma <amothic@gmail.com>
