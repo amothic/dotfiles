@@ -16,6 +16,7 @@ call vundle#rc()
 Bundle 'gtags.vim'
 Bundle 'surround.vim'
 Bundle 'quickrun.vim'
+Bundle 'sudo.vim'
 
 " 基本的な設定
 "--------------------------------------------------
