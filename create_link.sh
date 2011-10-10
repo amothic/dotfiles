@@ -7,3 +7,7 @@ do
 		ln -Fis "$PWD/$dotfile" $HOME
 	fi
 done
+
+# exception
+
+ln -Fis "$PWD/.gitconfig" $HOME

@@ -1,0 +1,7 @@
+[user]
+	name = Daichi Toma
+	email = amothic@gmail.com
+[core]
+	autocrlf = input
+	safecrlf = true
+	editor = vim
