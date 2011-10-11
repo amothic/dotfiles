@@ -164,6 +164,12 @@ inoremap <C-u> <C-g>u<C-u>
 " Rubyの場合タブ幅を2にする（タブの代わりにスペースを利用）
 au FileType ruby set tabstop=2 shiftwidth=2 expandtab
 
+" HTML 
+"--------------------------------------------------
+
+" HTMLの場合タブ幅を2にする（タブの代わりにスペースを利用）
+au FileType html set tabstop=2 shiftwidth=2 expandtab
+
 " Objective-C
 "--------------------------------------------------
 
