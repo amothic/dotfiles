@@ -1,5 +1,8 @@
 # This is Mercurial configuration file.
 
+[extensions]
+color =
+
 [ui]
 username = Daichi Toma <amothic@gmail.com>
 editor = vim
