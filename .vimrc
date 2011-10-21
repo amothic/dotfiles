@@ -14,6 +14,7 @@ call vundle#rc()
 
 " 使用するプラグイン
 Bundle 'gtags.vim'
+Bundle 'AutoComplPop'
 Bundle 'surround.vim'
 Bundle 'quickrun.vim'
 Bundle 'sudo.vim'
