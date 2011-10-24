@@ -57,3 +57,6 @@ linux*)
     alias ls="ls --color"
     ;;
 esac
+
+# ミスタイプ対策
+alias ks="ls"
