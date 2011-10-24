@@ -184,6 +184,20 @@ set tags=tags;
 " :ReloadVimrc<Return>でリロード
 command! ReloadVimrc source $MYVIMRC
 
+" ChangeLog
+"--------------------------------------------------
+
+" 日付のフォーマットを設定
+let g:changelog_dataformat = "%Y-%m-%d"
+
+" 使用する名前を設定
+let g:changelog_username = "Daichi Toma <amothic@gmail.com>"
+
+" エントリを作成するときの書式
+" let g:changelog_new_date_format = "%d %u\n\n\t%c\n\n"
+
+" 新しいアイテムを作成するときの書式
+" let g:changelog_new_entry_format = "\t%c"
 
 " QuickRun
 "--------------------------------------------------
