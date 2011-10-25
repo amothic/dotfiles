@@ -18,6 +18,7 @@ Bundle 'AutoComplPop'
 Bundle 'surround.vim'
 Bundle 'quickrun.vim'
 Bundle 'sudo.vim'
+Bundle 'Gundo'
 
 " 基本的な設定
 "--------------------------------------------------
@@ -205,3 +206,9 @@ let g:changelog_username = "Daichi Toma <amothic@gmail.com>"
 " \rでvim内で実行するが、
 " \Rの場合、shellで実行するように設定
 nnoremap <Leader>R :QuickRun -runner shell<CR>
+
+" Gundo
+"--------------------------------------------------
+
+" Uで、Undo Treeを表示するように設定
+nnoremap U :<C-u>GundoToggle<CR>
