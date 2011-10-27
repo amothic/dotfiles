@@ -13,12 +13,39 @@ set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
 " 使用するプラグイン
+
+" GNU Globalのためのプラグイン
+" :Gtags 関数名			定義へジャンプ
+" :Gtags -r 関数名		参照へジャンプ
+" :Gtags -f ファイル名  関数一覧を表示
+" :Gtags -g 文字列		ソースコード内のgrep
+" :GtagsCursor			カーソル位置の関数の定義、もしくは参照へジャンプ
 Bundle 'gtags.vim'
+
+" 補完を自動で行う
 Bundle 'AutoComplPop'
+
+" 括弧を選択できるようにテキストオブジェクトを拡張
+" cs{A}{B} と入力することで囲っている{A}を{B}に変えたりできる。
 Bundle 'surround.vim'
+
+" プログラムをvim上から\rと入力することで即座に実行
 Bundle 'quickrun.vim'
+
+" 現在開いているファイルを
+" :e sudo:%
+" と入力することでsudo権限で開きなおす
 Bundle 'sudo.vim'
+
+" U で、UndoTreeを可視化 
 Bundle 'Gundo'
+
+" =などを入力したときに、自動でスペースを開けてくれるプラグイン
+Bundle 'smartchr'
+
+" Alternate Files quickly (.c --> .h etc)
+" :A or :AS or :AV etc
+Bundle 'a.vim'
 
 " 基本的な設定
 "--------------------------------------------------
@@ -36,6 +63,9 @@ set confirm
 
 " キーコードはすぐにタイムアウトし、マッピングはタイムアウトしない
 set notimeout ttimeout ttimeoutlen=200
+
+" オートコマンドを一度全て破棄
+autocmd!
 
 " 編集
 "--------------------------------------------------
@@ -135,6 +165,15 @@ set softtabstop=0
 " Vimが内部で用いるエンコーディング
 set encoding=utf-8
 
+" 文字エンコーディングを指定して、ファイルを開く
+command! Cp932 edit ++enc=cp932
+command! Eucjp edit ++enc=euc-jp
+command! Iso2022jp edit ++enc=iso-2022-jp
+command! Utf8 edit ++enc=utf-8
+
+command! Jis Iso2022jp
+command! Sjis Cp932
+
 
 " マッピング
 "--------------------------------------------------
@@ -149,6 +188,18 @@ noremap : ;
 " 'と`を置き換える
 noremap ' `
 noremap ` '
+
+" 表示行単位で移動する
+noremap j gj
+noremap k gk
+noremap gj j
+noremap gk k
+
+" gcで最後に変更が行われたテキストを選択を可能にする
+" ちなみに最後にビジュアルモードで選択された領域を選択するのはgv
+nnoremap gc `[v`]
+vnoremap gc :<C-u>normal gc<Enter>
+onoremap gc :<C-u>normal gc<Enter>
 
 " Yの動作をDやCの動作とあわせる
 map Y y$
@@ -200,6 +251,15 @@ let g:changelog_username = "Daichi Toma <amothic@gmail.com>"
 " 新しいアイテムを作成するときの書式
 " let g:changelog_new_entry_format = "\t%c"
 
+" surround
+"--------------------------------------------------
+
+" デフォルトの設定で新たに囲むのはysだが、sで囲めるようにする。
+" s{motion}{A}で、{motion}を{A}で囲む
+nmap s <Plug>Ysurround
+nmap ss <Plug>Yssurround
+
+
 " QuickRun
 "--------------------------------------------------
 
@@ -212,3 +272,14 @@ nnoremap <Leader>R :QuickRun -runner shell<CR>
 
 " Uで、Undo Treeを表示するように設定
 nnoremap U :<C-u>GundoToggle<CR>
+
+
+" smartchr
+"--------------------------------------------------
+
+" 複数回入力した時の動作を順に記述する
+" smartchr#loop('A', 'B')
+" と順に記述していく
+
+" = を入力した時にスペースをあける
+inoremap <expr> = smartchr#loop(' = ', ' == ', '=')
