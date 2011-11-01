@@ -40,9 +40,6 @@ Bundle 'sudo.vim'
 " U で、UndoTreeを可視化 
 Bundle 'Gundo'
 
-" =などを入力したときに、自動でスペースを開けてくれるプラグイン
-Bundle 'smartchr'
-
 " Alternate Files quickly (.c --> .h etc)
 " :A or :AS or :AV etc
 Bundle 'a.vim'
@@ -272,19 +269,4 @@ nnoremap <Leader>R :QuickRun -runner shell<CR>
 
 " Uで、Undo Treeを表示するように設定
 nnoremap U :<C-u>GundoToggle<CR>
-
-
-" smartchr
-"--------------------------------------------------
-
-" 複数回入力した時の動作を順に記述する
-" smartchr#loop('A', 'B')
-" と順に記述していく
-
-" = を入力した時にスペースをあける
-inoremap <expr> = smartchr#loop(' = ', ' == ', '=')
-inoremap <expr> += smartchr#loop(' += ')
-inoremap <expr> -= smartchr#loop(' -= ')
-inoremap <expr> *= smartchr#loop(' *= ')
-inoremap <expr> /= smartchr#loop(' /= ')
 
