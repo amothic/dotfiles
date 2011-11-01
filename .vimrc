@@ -283,3 +283,8 @@ nnoremap U :<C-u>GundoToggle<CR>
 
 " = を入力した時にスペースをあける
 inoremap <expr> = smartchr#loop(' = ', ' == ', '=')
+inoremap <expr> += smartchr#loop(' += ')
+inoremap <expr> -= smartchr#loop(' -= ')
+inoremap <expr> *= smartchr#loop(' *= ')
+inoremap <expr> /= smartchr#loop(' /= ')
+
