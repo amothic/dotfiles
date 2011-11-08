@@ -235,6 +235,7 @@ command! ReloadVimrc source $MYVIMRC
 
 " ChangeLog
 "--------------------------------------------------
+" \oと入力
 
 " 日付のフォーマットを設定
 let g:changelog_dataformat = "%Y-%m-%d"

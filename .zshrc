@@ -60,3 +60,11 @@ esac
 
 # ミスタイプ対策
 alias ks="ls"
+
+case "${OSTYPE}" in
+	darwin*)
+		# rbenv
+		eval "$(rbenv init -)"
+		source ~/.rbenv/completions/rbenv.zsh
+		;;
+esac
