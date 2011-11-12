@@ -233,6 +233,12 @@ set tags=tags;
 " :ReloadVimrc<Return>でリロード
 command! ReloadVimrc source $MYVIMRC
 
+" Gnu Global (Gtags)
+"--------------------------------------------------
+nnoremap <C-n> :<C-u>cn<CR>
+nnoremap <C-p> :<C-u>cp<CR>
+nnoremap <C-j> :<C-u>GtagsCursor<CR>
+
 " ChangeLog
 "--------------------------------------------------
 " \oと入力
