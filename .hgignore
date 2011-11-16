@@ -1,6 +1,4 @@
-syntax: glob
-.DS_Store
-.svn
-.hg
-.hgignore
-.hgsvn
+syntax:regexp
+/\.
+git
+DS_Store
