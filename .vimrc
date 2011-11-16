@@ -113,7 +113,9 @@ set visualbell
 set t_vb=
 
 " 全角記号が、半角幅で表示されるのを防ぐ
-set ambiwidth=double
+"if exists('&ambiwidth')
+"	set ambiwidth=double
+"endif
 
 " 補完
 "--------------------------------------------------
