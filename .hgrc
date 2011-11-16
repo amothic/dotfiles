@@ -6,3 +6,4 @@ color =
 [ui]
 username = Daichi Toma <toma@cr.ie.u-ryukyu.ac.jp>
 editor = vim
+ignore=~/.hgignore
