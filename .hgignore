@@ -1,4 +1,8 @@
 syntax:regexp
 /\.
-git
-DS_Store
+
+syntax:glob
+GTAGS
+GRTAGS
+GPATH
+GSYMS
