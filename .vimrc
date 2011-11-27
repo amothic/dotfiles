@@ -44,6 +44,9 @@ Bundle 'Gundo'
 " :A or :AS or :AV etc
 Bundle 'a.vim'
 
+" cocoa.vim
+Bundle 'cocoa.vim'
+
 " 基本的な設定
 "--------------------------------------------------
 
