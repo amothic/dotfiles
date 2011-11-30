@@ -1,11 +1,5 @@
 export LANG=en_US.UTF-8
 
-case "${OSTYPE}" in
-	darwin*)
-		export PATH=/usr/local/bin:$PATH
-		;;
-esac
-
 autoload -U compinit
 compinit
 
