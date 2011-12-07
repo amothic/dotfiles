@@ -47,6 +47,16 @@ Bundle 'a.vim'
 " cocoa.vim
 Bundle 'cocoa.vim'
 
+" If you wish to paste previous values from the yankring,
+" I choose <C-P> (P for previous) or <C-N> (N for next) to replace the text 
+Bundle 'YankRing.vim'
+
+" zen-coding
+Bundle 'ZenCoding.vim'
+
+" Snippet
+Bundle 'snipMate'
+
 " 基本的な設定
 "--------------------------------------------------
 
@@ -221,6 +231,12 @@ inoremap <C-u> <C-g>u<C-u>
 
 " Rubyの場合タブ幅を2にする（タブの代わりにスペースを利用）
 au FileType ruby set tabstop=2 shiftwidth=2 expandtab
+
+" HTML
+"--------------------------------------------------
+
+" 相対URLのファイルをgfで開く
+autocmd FileType html setlocal includeexpr=substitute(v:fname,'^\\/','','') | setlocal path+=;/
 
 " Objective-C
 "--------------------------------------------------
