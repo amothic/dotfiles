@@ -3,24 +3,6 @@ export LANG=en_US.UTF-8
 ## 重複したパスを登録しない
 typeset -U path
 
-if type lv > /dev/null 2>&1; then
-    ## lvを優先する
-    export PAGER="lv"
-else
-    ## lvがなかったらlessを使う
-    export PAGER="less"
-fi
-
-if [ "$PAGER" = "lv" ]; then
-    ## -c: ANSIエスケープシーケンスの色付けなどを有効にする
-    ## -l: 1行が長くと折り返されていても1行として扱う
-    ##     （コピーしたときに余計な改行を入れない）
-    export LV="-c -l"
-else
-    ## lvがなくてもlvでページャーを起動する
-    alias lv="$PAGER"
-fi
-
 ## GNU grepがあったら優先して使う
 if type ggrep > /dev/null 2>&1; then
     alias grep=ggrep

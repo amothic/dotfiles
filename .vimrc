@@ -22,15 +22,15 @@ call vundle#rc()
 " :GtagsCursor			カーソル位置の関数の定義、もしくは参照へジャンプ
 Bundle 'gtags.vim'
 
-" 補完を自動で行う
-Bundle 'AutoComplPop'
-
 " 括弧を選択できるようにテキストオブジェクトを拡張
 " cs{A}{B} と入力することで囲っている{A}を{B}に変えたりできる。
 Bundle 'surround.vim'
 
 " プログラムをvim上から\rと入力することで即座に実行
 Bundle 'quickrun.vim'
+
+" 自動で補完する
+Bundle 'AutoComplPop'
 
 " 現在開いているファイルを
 " :e sudo:%
@@ -283,7 +283,6 @@ let g:changelog_username = "Daichi Toma <amothic@gmail.com>"
 " s{motion}{A}で、{motion}を{A}で囲む
 nmap s <Plug>Ysurround
 nmap ss <Plug>Yssurround
-
 
 " QuickRun
 "--------------------------------------------------
