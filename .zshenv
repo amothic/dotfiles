@@ -1,5 +1,10 @@
 export LANG=en_US.UTF-8
 
+if [ -e $HOME/.rbenv ]; then
+	export PATH="$HOME/.rbenv/bin:$PATH"
+	eval "$(rbenv init -)"
+fi
+
 ## 重複したパスを登録しない
 typeset -U path
 

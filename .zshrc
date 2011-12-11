@@ -163,10 +163,6 @@ linux*)
     ;;
 esac
 
-case "${OSTYPE}" in
-	darwin*)
-		# rbenv
-		eval "$(rbenv init -)"
-		source ~/.rbenv/completions/rbenv.zsh
-		;;
-esac
+if [ -e $HOME/.rbenv ]; then
+	source ~/.rbenv/completions/rbenv.zsh
+fi
