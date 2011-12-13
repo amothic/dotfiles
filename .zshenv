@@ -1,5 +1,7 @@
 export LANG=en_US.UTF-8
 
+export PATH=/usr/local/bin:$PATH
+
 if [ -e $HOME/.rbenv ]; then
 	export PATH="$HOME/.rbenv/bin:$PATH"
 	eval "$(rbenv init -)"

@@ -60,7 +60,7 @@ zstyle ':completion:*' list-colors 'di=36' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'c
 ## 補完候補がなければより曖昧に候補を探す
 ### m:{a-z}={A-Z}: 小文字を大文字に変えたものでも補完する
 ### r:|[._-]=*: 「.」「_」「-」の前にワイルドカード「*」があるものとして補完する
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z} r:|[._-]=*'
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 ## 補完方法の設定指定した順番に実行する
 ### _oldlist 前回の補完結果を再利用する
