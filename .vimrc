@@ -258,7 +258,7 @@ command! ReloadVimrc source $MYVIMRC
 "--------------------------------------------------
 nnoremap <C-j> :<C-u>cn<CR>
 nnoremap <C-k> :<C-u>cp<CR>
-nnoremap <C-}> :<C-u>GtagsCursor<CR>
+nnoremap <C-s> :<C-u>GtagsCursor<CR>
 
 " ChangeLog
 "--------------------------------------------------
