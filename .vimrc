@@ -256,9 +256,9 @@ command! ReloadVimrc source $MYVIMRC
 
 " Gnu Global (Gtags)
 "--------------------------------------------------
-nnoremap <C-n> :<C-u>cn<CR>
-nnoremap <C-p> :<C-u>cp<CR>
-nnoremap <C-j> :<C-u>GtagsCursor<CR>
+nnoremap <C-j> :<C-u>cn<CR>
+nnoremap <C-k> :<C-u>cp<CR>
+nnoremap <C-}> :<C-u>GtagsCursor<CR>
 
 " ChangeLog
 "--------------------------------------------------
@@ -268,7 +268,7 @@ nnoremap <C-j> :<C-u>GtagsCursor<CR>
 let g:changelog_dataformat = "%Y-%m-%d"
 
 " 使用する名前を設定
-let g:changelog_username = "Daichi Toma <amothic@gmail.com>"
+let g:changelog_username = "Daichi TOMA <amothic@gmail.com>"
 
 " エントリを作成するときの書式
 " let g:changelog_new_date_format = "%d %u\n\n\t%c\n\n"
