@@ -139,8 +139,8 @@ setopt ignore_eof
 WORDCHARS=${WORDCHARS:s,/,,}
 
 ## ページャーを使いやすくする
-### grep -r def *.rb L -> grep -r def *.rb |& lv
-alias -g L="|& $PAGER"
+### grep -r def *.rb L -> grep -r def *.rb |& less
+alias -g L="|& /usr/local/share/vim/vim73/macros/less.sh"
 ## grepを使いやすくする
 alias -g G='| grep'
 ## 後はおまけ

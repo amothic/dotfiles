@@ -117,7 +117,7 @@ colorscheme desert
 set t_Co=256
 
 " 行番号を表示
-set number
+" set number
 
 " 画面最下行にルーラーを表示する
 set ruler
