@@ -47,9 +47,6 @@ Bundle 'Gundo'
 " :A or :AS or :AV etc
 Bundle 'a.vim'
 
-" cocoa.vim
-Bundle 'cocoa.vim'
-
 " If you wish to paste previous values from the yankring,
 " I choose <C-P> (P for previous) or <C-N> (N for next) to replace the text 
 Bundle 'YankRing.vim'
@@ -59,15 +56,6 @@ Bundle 'ZenCoding.vim'
 
 " Snippet
 Bundle 'snipMate'
-
-" Source Explorer
-Bundle 'Source-Explorer-srcexpl.vim'
-
-" Be connection with Source Explorer
-Bundle 'trinity.vim'
-
-" Be connection with Source Explorer
-Bundle 'taglist.vim'
 
 " 基本的な設定
 "--------------------------------------------------
@@ -293,6 +281,11 @@ let g:changelog_username = "Daichi TOMA <amothic@gmail.com>"
 
 " 新しいアイテムを作成するときの書式
 " let g:changelog_new_entry_format = "\t%c"
+
+
+" YankRing
+"--------------------------------------------------
+let g:yankring_history_file = '.yankring_history'
 
 " surround
 "--------------------------------------------------
