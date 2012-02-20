@@ -167,7 +167,7 @@ set autoindent
 " shiftwidth	自動的に挿入されるインデントの幅
 " softtabstop	<Tab>押下時に挿入される文字幅を設定
 " 				（0の場合、tabstopで指定された数になる）
-set tabstop=4
+set tabstop=8
 set shiftwidth=4
 set softtabstop=0
 
