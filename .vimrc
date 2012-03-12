@@ -30,7 +30,7 @@ Bundle 'surround.vim'
 Bundle 'quickrun.vim'
 
 " 自動で補完する
-Bundle 'AutoComplPop'
+" Bundle 'AutoComplPop'
 
 " 現在開いているファイルを
 " :e sudo:%
@@ -56,6 +56,9 @@ Bundle 'ZenCoding.vim'
 
 " Snippet
 Bundle 'snipMate'
+
+" OpenCL
+Bundle 'opencl.vim--Wierzowiecki'
 
 " 基本的な設定
 "--------------------------------------------------
@@ -159,6 +162,9 @@ set hlsearch
 " インデント
 "--------------------------------------------------
 
+" スマートインデントを有効化
+set smartindent
+
 " オートインデントを有効化
 set autoindent
 
@@ -170,6 +176,9 @@ set autoindent
 set tabstop=8
 set shiftwidth=4
 set softtabstop=0
+
+" タブ入力をスペースに変換
+set expandtab
 
 " 文字コード
 "--------------------------------------------------
@@ -233,7 +242,9 @@ inoremap <C-u> <C-g>u<C-u>
 "--------------------------------------------------
 
 " Rubyの場合タブ幅を2にする（タブの代わりにスペースを利用）
-au FileType ruby set tabstop=2 shiftwidth=2 expandtab
+autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab
+
+autocmd FileType eruby setlocal tabstop=2 shiftwidth=2 expandtab
 
 " HTML
 "--------------------------------------------------
@@ -246,6 +257,21 @@ autocmd FileType html setlocal includeexpr=substitute(v:fname,'^\\/','','') | se
 
 ".mがObjective-Cのファイルとして認識されるように設定する
 let g:filetype_m = 'objc'
+
+" Makefile
+"--------------------------------------------------
+
+" makeの場合、expandtabを使わない
+autocmd FileType make setlocal noexpandtab
+
+" OpenCL
+"--------------------------------------------------
+
+" Syntax
+autocmd BufRead,BufNewFile *.cl set filetype=opencl
+
+" Indent
+autocmd FileType opencl set cindent
 
 " その他
 "--------------------------------------------------
