@@ -150,6 +150,8 @@ alias -g T='| tail'
 alias -g S='| sed'
 
 alias vi='vim'
+alias cp='cp -i'
+alias mv='mv -i'
 
 ## pushd/popdのショートカット
 alias pd="pushd"
