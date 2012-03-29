@@ -252,6 +252,8 @@ autocmd FileType eruby setlocal tabstop=2 shiftwidth=2 expandtab
 " 相対URLのファイルをgfで開く
 autocmd FileType html setlocal includeexpr=substitute(v:fname,'^\\/','','') | setlocal path+=;/
 
+autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
+
 " Objective-C
 "--------------------------------------------------
 
