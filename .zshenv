@@ -23,8 +23,6 @@ GREP_OPTIONS="--binary-files=without-match"
 if grep --help | grep -q -- --color; then
     GREP_OPTIONS="--color=auto $GREP_OPTIONS"
 fi
-### grep対象としてディレクトリを指定したらディレクトリ内を再帰的にgrepする
-GREP_OPTIONS="--directories=recurse $GREP_OPTIONS"
 
 ## vimを使う
 export EDITOR=vim
