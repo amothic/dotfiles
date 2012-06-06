@@ -53,6 +53,7 @@ Bundle 'opencl.vim--Wierzowiecki'
 " Scratch buffer
 Bundle 'scratch.vim'
 
+
 " 基本的な設定
 "--------------------------------------------------
 
@@ -122,9 +123,9 @@ set visualbell
 set t_vb=
 
 " 全角記号が、半角幅で表示されるのを防ぐ
-"if exists('&ambiwidth')
-"	set ambiwidth=double
-"endif
+if exists('&ambiwidth')
+	set ambiwidth=double
+endif
 
 " 補完
 "--------------------------------------------------
@@ -247,6 +248,9 @@ autocmd FileType html setlocal includeexpr=substitute(v:fname,'^\\/','','') | se
 
 autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
 
+autocmd FileType css setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType scss setlocal tabstop=2 shiftwidth=2 expandtab
+
 " Objective-C
 "--------------------------------------------------
 
@@ -267,6 +271,12 @@ autocmd BufRead,BufNewFile *.cl set filetype=opencl
 
 " Indent
 autocmd FileType opencl set cindent
+
+" Tex 
+"--------------------------------------------------
+
+autocmd FileType tex setlocal tabstop=2 shiftwidth=2 expandtab
+
 
 " その他
 "--------------------------------------------------
