@@ -53,6 +53,8 @@ Bundle 'opencl.vim--Wierzowiecki'
 " Scratch buffer
 Bundle 'scratch.vim'
 
+" Color scheme
+Bundle 'Solarized'
 
 " 基本的な設定
 "--------------------------------------------------
@@ -96,10 +98,14 @@ set background=dark
 " set background=light
 
 " カラースキム
-colorscheme desert
+" colorscheme desert
+colorscheme solarized
 
 " 256色表示
-set t_Co=256
+" set t_Co=256
+
+" 16色表示
+set t_Co=16
 
 " 行番号を表示
 " set number

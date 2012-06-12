@@ -18,7 +18,7 @@ setopt long_list_jobs
 
 zstyle ':completion:*' format '%B%d%b'
 zstyle ':completion:*' group-name ''
-zstyle ':completion:*:default' menu select=1
+zstyle ':completion:*:default' menu select=2
 zstyle ':completion:*' list-colors 'di=36' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z} r:|[._-]=*'
 zstyle ':completion:*' completer \
