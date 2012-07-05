@@ -1,8 +1,8 @@
 LANG=en_US.UTF-8
 if type /usr/local/bin/vim > /dev/null 2>&1; then
-    EDITOR=/usr/local/bin/vim
+    export EDITOR=/usr/local/bin/vim
 else
-    EDITOR=vi
+    export EDITOR=vi
 fi
 
 # PATH
