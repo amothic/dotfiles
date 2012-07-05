@@ -1,5 +1,5 @@
 LANG=en_US.UTF-8
-if type /usr/loca/bin/vim > /dev/null 2>&1; then
+if type /usr/local/bin/vim > /dev/null 2>&1; then
     EDITOR=/usr/local/bin/vim
 else
     EDITOR=vi
