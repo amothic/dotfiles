@@ -339,4 +339,3 @@ nnoremap <Leader>R :QuickRun -runner shell<CR>
 
 " Uで、Undo Treeを表示するように設定
 nnoremap U :<C-u>GundoToggle<CR>
-

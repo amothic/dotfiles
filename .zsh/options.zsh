@@ -4,7 +4,6 @@ compinit
 setopt auto_pushd
 setopt pushd_ignore_dups
 setopt list_packed
-setopt complete_in_word
 setopt glob_complete
 setopt hist_expand
 setopt numeric_glob_sort
@@ -19,7 +18,7 @@ setopt long_list_jobs
 zstyle ':completion:*' format '%B%d%b'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*:default' menu select=2
-zstyle ':completion:*' list-colors 'di=36' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
+zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z} r:|[._-]=*'
 zstyle ':completion:*' completer \
         _oldlist _complete _match _history _ignored _approximate _prefix
@@ -28,8 +27,10 @@ zstyle ':completion:*' verbose yes
 zstyle ':completion:sudo:*' environ PATH="$SUDO_PATH:$PATH"
 
 # ls color
-export LSCOLORS=gxfxcxdxbxegedabagacad
-export LS_COLORS='di=36:ln=35:so=32:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+export LSCOLORS=exfxcxdxbxegedabagacad
+export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+# export LSCOLORS=gxfxcxdxbxegedabagacad
+# export LS_COLORS='di=36:ln=35:so=32:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 
 # grep options
 export GREP_OPTIONS
