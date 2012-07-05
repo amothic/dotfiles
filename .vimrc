@@ -175,7 +175,7 @@ set autoindent
 " 				（0の場合、tabstopで指定された数になる）
 set tabstop=8
 set shiftwidth=4
-set softtabstop=0
+set softtabstop=4
 
 " タブ入力をスペースに変換
 set expandtab
