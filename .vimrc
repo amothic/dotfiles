@@ -10,6 +10,9 @@ filetype off
 " vundleのディレクトリ
 set rtp+=~/.vim/vundle.git/
 
+" SSLを使用しない
+let $GIT_SSL_NO_VERIFY = 'true'
+
 call vundle#rc()
 
 " 使用するプラグイン
@@ -92,10 +95,10 @@ set nostartofline
 syntax on
 
 " 黒めの背景色を使用
-set background=dark
+" set background=dark
 
 " 白めの背景色を使用
-" set background=light
+set background=light
 
 " カラースキム
 " colorscheme desert
@@ -311,7 +314,7 @@ nnoremap <C-t> :<C-u>GtagsCursor<CR>
 let g:changelog_dataformat = "%Y-%m-%d"
 
 " 使用する名前を設定
-let g:changelog_username = "Daichi TOMA <amothic@gmail.com>"
+let g:changelog_username = "Daichi TOMA <toma@cr.ie.u-ryukyu.ac.jp>"
 
 " エントリを作成するときの書式
 " let g:changelog_new_date_format = "%d %u\n\n\t%c\n\n"
