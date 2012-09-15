@@ -8,6 +8,7 @@ fi
 # PATH
 typeset -U path
 path=(
+/usr/sbin
 /usr/local/bin
 $path
 )
