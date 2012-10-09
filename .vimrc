@@ -238,6 +238,22 @@ noremap <CR> o<ESC>
 inoremap <C-w> <C-g>u<C-w>
 inoremap <C-u> <C-g>u<C-u>
 
+" 矩形選択
+"--------------------------------------------------
+
+vnoremap <expr> I  <SID>force_blockwise_visual('I')
+vnoremap <expr> A  <SID>force_blockwise_visual('A')
+
+function! s:force_blockwise_visual(next_key)
+    if mode() ==# 'v'
+        return "\<C-v>" . a:next_key
+    elseif mode() ==# 'V'
+        return "\<C-v>0o$" . a:next_key
+    else  " mode() ==# "\<C-v>"
+        return a:next_key
+    endif
+endfunction
+
 " Ruby
 "--------------------------------------------------
 
