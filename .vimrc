@@ -238,6 +238,14 @@ noremap <CR> o<ESC>
 inoremap <C-w> <C-g>u<C-w>
 inoremap <C-u> <C-g>u<C-u>
 
+" カーソルを自動的に()の中へ
+imap {} {}<Left>
+imap [] []<Left>
+imap () ()<Left>
+imap "" ""<Left>
+imap '' ''<Left>
+imap <> <><Left>
+
 " 矩形選択
 "--------------------------------------------------
 
@@ -270,6 +278,7 @@ autocmd FileType html setlocal includeexpr=substitute(v:fname,'^\\/','','') | se
 
 autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
 
+autocmd FileType php setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType css setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType scss setlocal tabstop=2 shiftwidth=2 expandtab
 
@@ -312,6 +321,14 @@ command! ReloadVimrc source $MYVIMRC
 
 " 前回終了したカーソル行に移動
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
+
+
+" 無限Undo
+" ~/.vim/undo
+if has('persistent_undo')
+    set undodir=~/.vimundo
+    set undofile
+endif
 
 " Gnu Global (Gtags)
 "--------------------------------------------------
