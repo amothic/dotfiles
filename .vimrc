@@ -7,9 +7,20 @@ filetype off
 
 if has('vim_starting')
     set runtimepath+=~/.vim/NeoBundle.vim.git/
-
-    call neobundle#rc(expand('~/.vim/bundle'))
 endif
+
+call neobundle#rc(expand('~/.vim/bundle'))
+
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'windows' : 'echo "Sorry, cannot update vimproc binary file in Windows."',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
+
+NeoBundle 'Shougo/unite.vim'
 
 " 使用するプラグイン
 " GNU Globalのためのプラグイン
@@ -25,7 +36,7 @@ NeoBundle 'gtags.vim'
 NeoBundle 'surround.vim'
 
 " プログラムをvim上から\rと入力することで即座に実行
-NeoBundle 'quickrun.vim'
+NeoBundle 'thinca/quickrun.vim'
 
 " 自動で補完する
 " NeoBundle 'AutoComplPop'
