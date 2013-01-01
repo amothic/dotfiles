@@ -2,4 +2,4 @@
 cd $(dirname $0)
 
 $PWD/create_link.sh
-$PWD/vundle.sh
+$PWD/vim.sh

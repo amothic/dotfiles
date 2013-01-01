@@ -1,39 +1,34 @@
-" Vi互換モードをオフ（Vimの拡張機能を有効にする）
 set nocompatible
 
-" vundle
+" NeoBundle
 "--------------------------------------------------
 
-" vundleの設定のために一度filetypeをoffにする
 filetype off
 
-" vundleのディレクトリ
-set rtp+=~/.vim/vundle.git/
+if has('vim_starting')
+    set runtimepath+=~/.vim/NeoBundle.vim.git/
 
-" SSLを使用しない
-let $GIT_SSL_NO_VERIFY = 'true'
-
-call vundle#rc()
+    call neobundle#rc(expand('~/.vim/bundle'))
+endif
 
 " 使用するプラグイン
-
 " GNU Globalのためのプラグイン
 " :Gtags 関数名			定義へジャンプ
 " :Gtags -r 関数名		参照へジャンプ
 " :Gtags -f ファイル名  関数一覧を表示
 " :Gtags -g 文字列		ソースコード内のgrep
 " :GtagsCursor			カーソル位置の関数の定義、もしくは参照へジャンプ
-Bundle 'gtags.vim'
+NeoBundle 'gtags.vim'
 
 " 括弧を選択できるようにテキストオブジェクトを拡張
 " cs{A}{B} と入力することで囲っている{A}を{B}に変えたりできる。
-Bundle 'surround.vim'
+NeoBundle 'surround.vim'
 
 " プログラムをvim上から\rと入力することで即座に実行
-Bundle 'quickrun.vim'
+NeoBundle 'quickrun.vim'
 
 " 自動で補完する
-" Bundle 'AutoComplPop'
+" NeoBundle 'AutoComplPop'
 
 " 現在開いているファイルを
 " :e sudo:%
@@ -41,20 +36,20 @@ Bundle 'quickrun.vim'
 " :w |sudo tee >/dev/null %
 " :w |sudo tee %
 " と同じ
-" Bundle 'sudo.vim'
+" NeoBundle 'sudo.vim'
 
 " U で、UndoTreeを可視化 
-Bundle 'Gundo'
+NeoBundle 'Gundo'
 
 " Alternate Files quickly (.c --> .h etc)
 " :A or :AS or :AV etc
-Bundle 'a.vim'
+NeoBundle 'a.vim'
 
 " OpenCL
-Bundle 'opencl.vim--Wierzowiecki'
+" NeoBundle 'opencl.vim--Wierzowiecki'
 
 " Scratch buffer
-Bundle 'scratch.vim'
+NeoBundle 'scratch.vim'
 
 " 基本的な設定
 "--------------------------------------------------
