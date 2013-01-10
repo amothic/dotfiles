@@ -41,3 +41,12 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
+# mosh
+compdef mosh=ssh
+
+# z
+case ${OSTYPE} in
+    darwin*)
+        . `brew --prefix`/etc/profile.d/z.sh
+        ;;
+esac
