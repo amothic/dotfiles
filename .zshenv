@@ -22,3 +22,8 @@ if [ -e $HOME/.rbenv ]; then
     eval "$(rbenv init -)"
 fi
 
+# Haskell
+path=(
+$HOME/Library/Haskell/bin
+$path
+)

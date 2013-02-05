@@ -53,9 +53,11 @@ NeoBundle 'thinca/quickrun.vim'
 " U で、UndoTreeを可視化 
 NeoBundle 'Gundo'
 
+" C++
 " Alternate Files quickly (.c --> .h etc)
 " :A or :AS or :AV etc
 NeoBundle 'a.vim'
+NeoBundle 'Rip-Rip/clang_complete'
 
 " OpenCL
 " NeoBundle 'opencl.vim--Wierzowiecki'
@@ -65,6 +67,9 @@ NeoBundle 'scratch.vim'
 
 " Haskell
 NeoBundle 'dag/vim2hs.git'
+NeoBundle 'eagletmt/ghcmod-vim'
+NeoBundle 'neco-ghc'
+let $PATH = $PATH . ':' . expand("~/.cabal/bin")
 
 " 基本的な設定
 "--------------------------------------------------
@@ -384,7 +389,7 @@ nnoremap <Leader>R :QuickRun -runner shell<CR>
 " Uで、Undo Treeを表示するように設定
 nnoremap U :<C-u>GundoToggle<CR>
 
-" AutoComplPop
+" NeoBundle
 "--------------------------------------------------
 
 " Launches neocomplcache automatically on vim startup.
@@ -441,4 +446,21 @@ if !exists('g:neocomplcache_omni_patterns')
     let g:neocomplcache_omni_patterns = {}
 endif
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+
+" clangの設定
+" neocomplcacheとclangを併用するための設定
+
+" neocomplcache 側の設定
+let g:neocomplcache_force_overwrite_completefunc=1
+
+if !exists("g:neocomplcache_force_omni_patterns")
+    let g:neocomplcache_force_omni_patterns = {}
+endif
+
+" omnifunc が呼び出される場合の正規表現パターンを設定しておく
+let g:neocomplcache_force_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|::'
+
+" clang_complete 側の設定
+" clang_complete の自動呼び出しは切る
+let g:clang_complete_auto=0
