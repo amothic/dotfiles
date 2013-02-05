@@ -124,7 +124,8 @@ set ruler
 
 " ステータスラインを常に表示する
 set laststatus=2
-set statusline=%F%m%r%h%w%=\ %{'[E:'.(&fenc!=''?&fenc:&enc).'][F:'.&ff.']'}[L:%04l\/%04L]
+set statusline=%F%m%r%h%w
+set statusline+=%=[FT:%Y][E:%{(&fenc!=''?&fenc:&enc)}][FF:%{&ff}][L:%l\/%L](%P)
 
 " コマンドラインの高さを2行に
 set cmdheight=2
