@@ -262,12 +262,12 @@ inoremap <C-w> <C-g>u<C-w>
 inoremap <C-u> <C-g>u<C-u>
 
 " カーソルを自動的に()の中へ
-imap {} {}<Left>
-imap [] []<Left>
-imap () ()<Left>
-imap "" ""<Left>
-imap '' ''<Left>
-imap <> <><Left>
+" imap {} {}<Left>
+" imap [] []<Left>
+" imap () ()<Left>
+" imap "" ""<Left>
+" imap '' ''<Left>
+" imap <> <><Left>
 
 " 矩形選択
 "--------------------------------------------------
