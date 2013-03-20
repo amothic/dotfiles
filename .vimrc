@@ -58,6 +58,9 @@ NeoBundle 'Gundo'
 " :A or :AS or :AV etc
 NeoBundle 'a.vim'
 NeoBundle 'Rip-Rip/clang_complete'
+NeoBundle 'taglist.vim'
+" NeoBundle 'vim-scripts/SrcExpl'
+
 
 " OpenCL
 " NeoBundle 'opencl.vim--Wierzowiecki'
@@ -69,6 +72,7 @@ NeoBundle 'scratch.vim'
 NeoBundle 'dag/vim2hs.git'
 NeoBundle 'eagletmt/ghcmod-vim'
 NeoBundle 'neco-ghc'
+" NeoBundle 'indenthaskell.vim'
 let $PATH = $PATH . ':' . expand("~/.cabal/bin")
 
 " 基本的な設定
@@ -148,6 +152,9 @@ set t_vb=
 if exists('&ambiwidth')
 	set ambiwidth=double
 endif
+
+" 折り畳みをしない
+set foldlevel=100 "Don't autofold anything
 
 " 補完
 "--------------------------------------------------
@@ -389,7 +396,7 @@ nnoremap <Leader>R :QuickRun -runner shell<CR>
 " Uで、Undo Treeを表示するように設定
 nnoremap U :<C-u>GundoToggle<CR>
 
-" NeoBundle
+" Neocomplecache
 "--------------------------------------------------
 
 " Launches neocomplcache automatically on vim startup.
@@ -464,3 +471,28 @@ let g:neocomplcache_force_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|::'
 " clang_complete 側の設定
 " clang_complete の自動呼び出しは切る
 let g:clang_complete_auto=0
+
+
+" C++
+"--------------------------------------------------
+
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+let tlist_php_settings = 'php;c:class;d:constant;f:function'
+
+if has("cscope")
+  set cscopeprg=/usr/local/bin/cscope
+  " 先にcscopeデータベースを探す。1の場合はtagsファイルから検索
+  set csto=0
+  " tagsの代わりにcstagを使うようにする
+  set cst
+  set nocsverb
+  " add any database in current directory
+  if filereadable("cscope.out")
+    cs add cscope.out
+  " else add database pointed to by environment 
+  elseif $CSCOPE_DB != ""
+    cs add $CSCOPE_DB
+  endif
+  set csverb
+  set cscopequickfix=s-,c-,d-,i-,t-,e-
+endif

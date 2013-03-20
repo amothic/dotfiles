@@ -2,6 +2,7 @@
 
 [extensions]
 color =
+hgext.purge=
 
 [ui]
 username = Daichi TOMA <toma@cr.ie.u-ryukyu.ac.jp>
