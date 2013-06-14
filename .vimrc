@@ -70,9 +70,17 @@ NeoBundle 'scratch.vim'
 
 " Haskell
 NeoBundle 'dag/vim2hs.git'
+
+" 以下の2つは、cabal install ghc-modが必要
+
+" :GhcModTypeなどで、型が分かる
+" :GhcModCheckで、コンパイルエラーが出せる
 NeoBundle 'eagletmt/ghcmod-vim'
+" ghc-modを使って補完を行う
 NeoBundle 'neco-ghc'
+
 " NeoBundle 'indenthaskell.vim'
+
 let $PATH = $PATH . ':' . expand("~/.cabal/bin")
 
 " 基本的な設定
@@ -331,7 +339,10 @@ autocmd FileType opencl set cindent
 
 autocmd FileType tex setlocal tabstop=2 shiftwidth=2 expandtab
 
+" Haskell
+"--------------------------------------------------
 
+autocmd FileType haskell setlocal tabstop=2 shiftwidth=2 expandtab
 " その他
 "--------------------------------------------------
 
@@ -452,7 +463,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 if !exists('g:neocomplcache_omni_patterns')
     let g:neocomplcache_omni_patterns = {}
 endif
-let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+" let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 "autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
 " clangの設定
