@@ -71,17 +71,17 @@ NeoBundle 'scratch.vim'
 " Haskell
 NeoBundle 'dag/vim2hs.git'
 
-" 以下の2つは、cabal install ghc-modが必要
+if isdirectory(expand("~/.cabal/bin"))
+    " :GhcModTypeなどで、型が分かる
+    " :GhcModCheckで、コンパイルエラーが出せる
+    NeoBundle 'eagletmt/ghcmod-vim'
+    " ghc-modを使って補完を行う
+    NeoBundle 'neco-ghc'
 
-" :GhcModTypeなどで、型が分かる
-" :GhcModCheckで、コンパイルエラーが出せる
-NeoBundle 'eagletmt/ghcmod-vim'
-" ghc-modを使って補完を行う
-NeoBundle 'neco-ghc'
+    " NeoBundle 'indenthaskell.vim'
 
-" NeoBundle 'indenthaskell.vim'
-
-let $PATH = $PATH . ':' . expand("~/.cabal/bin")
+    let $PATH = $PATH . ':' . expand("~/.cabal/bin")
+endif
 
 " 基本的な設定
 "--------------------------------------------------
