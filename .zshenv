@@ -11,6 +11,7 @@ typeset -U path
 path=(
 /usr/sbin
 /usr/local/bin
+/usr/local/sbin
 $path
 )
 
