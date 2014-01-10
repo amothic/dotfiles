@@ -81,9 +81,7 @@ if executable(expand("~/Library/Haskell/bin/ghc-mod"))
     NeoBundle 'eagletmt/ghcmod-vim'
     " ghc-modを使って補完を行う
     " cabalやcabなどでinstallが必要
-    NeoBundle 'neco-ghc'
-
-    let $PATH = $PATH . ':' . expand("~/.cabal/bin")
+    NeoBundle 'eagletmt/neco-ghc'
 endif
 
 " 基本的な設定
