@@ -65,20 +65,23 @@ NeoBundle 'taglist.vim'
 " OpenCL
 " NeoBundle 'opencl.vim--Wierzowiecki'
 
+" HTML
+NeoBundle 'taichouchou2/vim-javascript'
+
 " Scratch buffer
 NeoBundle 'scratch.vim'
 
 " Haskell
 NeoBundle 'dag/vim2hs.git'
+NeoBundle 'kana/vim-filetype-haskell'
 
-if isdirectory(expand("~/.cabal/bin"))
+if executable(expand("~/Library/Haskell/bin/ghc-mod"))
     " :GhcModTypeなどで、型が分かる
     " :GhcModCheckで、コンパイルエラーが出せる
     NeoBundle 'eagletmt/ghcmod-vim'
     " ghc-modを使って補完を行う
+    " cabalやcabなどでinstallが必要
     NeoBundle 'neco-ghc'
-
-    " NeoBundle 'indenthaskell.vim'
 
     let $PATH = $PATH . ':' . expand("~/.cabal/bin")
 endif
@@ -312,6 +315,7 @@ autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType css setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType scss setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 expandtab
 
 " Objective-C
 "--------------------------------------------------
@@ -341,8 +345,11 @@ autocmd FileType tex setlocal tabstop=2 shiftwidth=2 expandtab
 
 " Haskell
 "--------------------------------------------------
-
 autocmd FileType haskell setlocal tabstop=2 shiftwidth=2 expandtab
+
+" vim2hsのラムダ式の変換を止める
+let g:haskell_conceal = 0
+
 " その他
 "--------------------------------------------------
 
