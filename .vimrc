@@ -22,6 +22,8 @@ NeoBundle 'Shougo/vimproc', {
 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache'
+NeoBundle "nathanaelkane/vim-indent-guides"
+NeoBundle 'tomasr/molokai'
 
 " 使用するプラグイン
 " GNU Globalのためのプラグイン
@@ -126,7 +128,7 @@ set background=dark
 " set background=light
 
 " カラースキム
-colorscheme desert
+colorscheme molokai
 
 " 256色表示
 set t_Co=256
@@ -211,6 +213,15 @@ set softtabstop=4
 
 " タブ入力をスペースに変換
 set expandtab
+
+" IndentGuide
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_start_level=2
+let g:indent_guides_auto_colors=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
+let g:indent_guides_color_change_percent = 30
+let g:indent_guides_guide_size = 1
 
 " 文字コード
 "--------------------------------------------------
@@ -512,3 +523,10 @@ if has("cscope")
   set csverb
   set cscopequickfix=s-,c-,d-,i-,t-,e-
 endif
+
+" vimdiff
+"--------------------------------------------------
+hi DiffAdd    ctermfg=black ctermbg=2
+hi DiffChange ctermfg=black ctermbg=3
+hi DiffDelete ctermfg=black ctermbg=6
+hi DiffText   ctermfg=black ctermbg=7
