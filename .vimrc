@@ -280,6 +280,9 @@ noremap <CR> o<ESC>
 inoremap <C-w> <C-g>u<C-w>
 inoremap <C-u> <C-g>u<C-u>
 
+" 縦分割gf
+nnoremap gs :vertical wincmd f<CR>
+
 " カーソルを自動的に()の中へ
 " imap {} {}<Left>
 " imap [] []<Left>
