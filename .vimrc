@@ -288,6 +288,16 @@ inoremap <C-u> <C-g>u<C-u>
 " imap '' ''<Left>
 " imap <> <><Left>
 
+cnoremap <C-a> <Home>
+cnoremap <C-b> <Left>
+cnoremap <C-d> <Del>
+cnoremap <C-e> <End>
+cnoremap <C-f> <Right>
+cnoremap <C-h> <Backspace>
+cnoremap <C-k> <C-\>e getcmdpos() == 1 ? '' : getcmdline()[:getcmdpos()-2]<CR>
+cnoremap <C-n> <Down>
+cnoremap <C-p> <Up>
+
 " TAB
 "--------------------------------------------------
 " Anywhere SID.
