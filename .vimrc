@@ -22,6 +22,7 @@ NeoBundle 'Shougo/vimproc', {
 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache'
+
 " :Unite outlineで関数見出し表示
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle "nathanaelkane/vim-indent-guides"
@@ -69,6 +70,9 @@ NeoBundle 'taglist.vim'
 " OpenCL
 " NeoBundle 'opencl.vim--Wierzowiecki'
 
+" HTML
+NeoBundle 'digitaltoad/vim-jade.git'
+
 " Scratch buffer
 NeoBundle 'scratch.vim'
 
@@ -84,6 +88,15 @@ if executable(expand("~/Library/Haskell/bin/ghc-mod"))
     " cabalやcabなどでinstallが必要
     NeoBundle 'eagletmt/neco-ghc'
 endif
+
+" Ruby
+NeoBundle "osyo-manga/shabadou.vim"
+NeoBundle "osyo-manga/vim-watchdogs"
+NeoBundle "jceb/vim-hier"
+NeoBundle "dannyob/quickfixstatus"
+
+NeoBundle "tpope/vim-fugitive"
+
 
 " 基本的な設定
 "--------------------------------------------------
@@ -104,6 +117,10 @@ set notimeout ttimeout ttimeoutlen=200
 
 " オートコマンドを一度全て破棄
 autocmd!
+
+" crontabが上手く働かないので、
+" tmpとprivate/tmpではバックアップファイルを作成しない
+set backupskip=/tmp/*,/private/tmp/*
 
 " 編集
 "--------------------------------------------------
@@ -272,6 +289,12 @@ map Y y$
 
 " <C-L>で検索語の強調表示を解除する
 nnoremap <C-L> :nohl<CR><C-L>
+function! s:hier_clear()
+    if exists(':HierClear')
+        HierClear
+    endif
+endfunction
+nnoremap <C-L> :<C-u>nohlsearch<CR>:<C-u>call <SID>hier_clear()<CR>
 
 " ノーマルモードでEnterを入力するだけで空行を挿入する
 noremap <CR> o<ESC>
@@ -371,6 +394,19 @@ endfunction
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab
 
 autocmd FileType eruby setlocal tabstop=2 shiftwidth=2 expandtab
+
+let g:quickrun_config = {
+\   "ruby/watchdogs_checker" : {
+\       "type" : "watchdogs_checker/rubocop",
+\       "hook/close_quickfix/enable_exit" : 1,
+\   },
+\}
+let g:watchdogs_check_BufWritePost_enables = {
+\   "ruby"     : 1,
+\}
+call watchdogs#setup(g:quickrun_config)
+
+
 
 " HTML
 "--------------------------------------------------
