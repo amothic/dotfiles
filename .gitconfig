@@ -3,12 +3,10 @@
 	email = amothic@gmail.com
 [core]
 	autocrlf = input
+	safecrlf = true
 	editor = vim
+	excludesfile = ~/.gitignore.global
 [alias]
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-	st = status
-	unstage = reset HEAD --
-	last = log -p -1 HEAD
 	co = checkout
 [merge]
 	tool = vimdiff
@@ -16,3 +14,5 @@
 	ui = auto
 [push]
 	default = simple
+[include]
+	path = ~/.gitconfig.local
