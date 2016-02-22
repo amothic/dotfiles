@@ -8,7 +8,6 @@ setopt glob_complete
 setopt hist_expand
 setopt numeric_glob_sort
 setopt magic_equal_subst
-setopt extended_glob
 setopt mark_dirs
 setopt no_beep
 setopt nolistbeep
@@ -29,8 +28,6 @@ zstyle ':completion:sudo:*' environ PATH="$SUDO_PATH:$PATH"
 # ls color
 export LSCOLORS=exfxcxdxbxegedabagacad
 export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-# export LSCOLORS=gxfxcxdxbxegedabagacad
-# export LS_COLORS='di=36:ln=35:so=32:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 
 # grep options
 export GREP_OPTIONS="--color=auto"
@@ -40,13 +37,3 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
-
-# mosh
-compdef mosh=ssh
-
-# z
-case ${OSTYPE} in
-    darwin*)
-        . `brew --prefix`/etc/profile.d/z.sh
-        ;;
-esac

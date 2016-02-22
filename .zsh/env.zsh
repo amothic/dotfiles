@@ -20,10 +20,6 @@ setopt hist_find_no_dups
 
 # Other
 bindkey -e
-
 REPORTTIME=3
-
 watch="all"
 log
-
-WORDCHARS=${WORDCHARS:s,/,,}
