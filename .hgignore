@@ -1,8 +1,0 @@
-syntax:regexp
-/\.
-
-syntax:glob
-GTAGS
-GRTAGS
-GPATH
-GSYMS
