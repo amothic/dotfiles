@@ -174,6 +174,9 @@ set fileencoding=utf-8
 " Quick :help
 nnoremap <C-h> :<C-u>help<Space>
 
+nnoremap ; :
+nnoremap : ;
+
 " 表示行単位で移動する
 noremap j gj
 noremap k gk
