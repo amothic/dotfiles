@@ -36,6 +36,9 @@ NeoBundle "tpope/vim-fugitive"
 " 矩型選択じゃないvisual mode中にIやAが使えるようにする
 NeoBundle "kana/vim-niceblock"
 
+" for elixir
+NeoBundle "elixir-lang/vim-elixir"
+
 " 基本的な設定
 "--------------------------------------------------
 
