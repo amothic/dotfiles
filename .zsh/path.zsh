@@ -21,3 +21,12 @@ if [ -d $MY_RBENV ]; then
     )
     eval "$(rbenv init -)"
 fi
+
+MY_NDENV="$HOME/.ndenv"
+if [ -d $MY_NDENV ]; then
+    path=(
+    $MY_NDENV/bin(N-/)
+    $path
+    )
+    eval "$(ndenv init -)"
+fi
