@@ -9,4 +9,5 @@ else
     export GIT_EDITOR=vim
 fi
 
+setopt no_global_rcs
 source ~/.zsh/path.zsh
