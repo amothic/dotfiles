@@ -112,6 +112,10 @@ endif
 " 折り畳みをしない
 set foldlevel=100
 
+" 不可視文字を表示
+set list
+set listchars=tab:»-,trail:-
+
 " 補完
 "--------------------------------------------------
 
@@ -198,14 +202,6 @@ inoremap <C-u> <C-g>u<C-u>
 
 " 縦分割gf
 nnoremap gs :vertical wincmd f<CR>
-
-" カーソルを自動的に()の中へ
-inoremap {} {}<Left>
-inoremap [] []<Left>
-inoremap () ()<Left>
-inoremap "" ""<Left>
-inoremap '' ''<Left>
-inoremap <> <><Left>
 
 " コマンドラインモードでemacs keybind
 cnoremap <C-a> <Home>

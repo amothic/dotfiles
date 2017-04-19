@@ -2,6 +2,7 @@
 typeset -U path cdpath fpath manpath
 path=(
 /usr/local/bin(N-/)
+/usr/local/sbin(N-/)
 $path
 )
 
@@ -30,3 +31,5 @@ if [ -d $MY_NDENV ]; then
     )
     eval "$(ndenv init -)"
 fi
+
+if which plenv > /dev/null; then eval "$(plenv init - zsh)"; fi
