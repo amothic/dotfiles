@@ -16,6 +16,7 @@ cask 'google-japanese-ime'
 cask 'iterm2'
 cask 'kindle'
 cask 'rekordbox'
+cask 'spotify'
 mas '1Password', id: 443987910
 mas 'LINE', id: 539883307
 mas 'OmniGraffle', id: 711830901
