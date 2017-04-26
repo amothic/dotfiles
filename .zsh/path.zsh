@@ -32,4 +32,11 @@ if [ -d $MY_NDENV ]; then
     eval "$(ndenv init -)"
 fi
 
-if which plenv > /dev/null; then eval "$(plenv init - zsh)"; fi
+MY_PLENV="$HOME/.plenv"
+if [ -d $MY_PLENV ]; then
+    path=(
+    $MY_PLENV/bin(N-/)
+    $path
+    )
+    eval "$(plenv init - zsh)"
+fi
