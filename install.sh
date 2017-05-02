@@ -12,7 +12,6 @@ $PWD/vim.sh
 
 echo "Install Homebrew and Install Apps"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew tap Homebrew/bundle
 brew bundle
 
 echo "Itunes use Japanese"
