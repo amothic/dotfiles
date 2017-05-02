@@ -1,6 +1,7 @@
 tap 'caskroom/cask'
 tap 'homebrew/bundle'
 brew 'git'
+brew 'go'
 brew 'mas'
 brew 'nkf'
 brew 'perl-build'
