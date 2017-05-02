@@ -40,3 +40,11 @@ if [ -d $MY_PLENV ]; then
     )
     eval "$(plenv init - zsh)"
 fi
+
+GO_ROOT="/usr/local/opt/go"
+if [ -d $GO_ROOT ]; then
+    path=(
+    $GO_ROOT/libexec/bin(N-/)
+    $path
+    )
+fi
