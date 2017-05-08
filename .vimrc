@@ -238,6 +238,8 @@ endif
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType eruby setlocal tabstop=2 shiftwidth=2 expandtab
 
+autocmd BufRead,BufNewFile Schemafile set filetype=ruby
+
 " HTML
 "--------------------------------------------------
 
