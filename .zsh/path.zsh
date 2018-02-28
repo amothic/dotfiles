@@ -38,7 +38,16 @@ if [ -d $MY_PLENV ]; then
     $MY_PLENV/bin(N-/)
     $path
     )
-    eval "$(plenv init - zsh)"
+    eval "$(plenv init -)"
+fi
+
+MY_PYENV="$HOME/.pyenv"
+if [ -d $MY_PYENV ]; then
+    path=(
+    $MY_PYENV/bin(N-/)
+    $path
+    )
+    eval "$(pyenv init -)"
 fi
 
 MY_GO="$HOME/go"

@@ -160,8 +160,8 @@ set autoindent
 " softtabstop  <Tab>押下時に挿入される文字幅を設定
 "             ( 0の場合、tabstopで指定された数になる )
 set tabstop=8
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 
 " タブ入力をスペースに変換
 set expandtab
@@ -239,6 +239,11 @@ autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType eruby setlocal tabstop=2 shiftwidth=2 expandtab
 
 autocmd BufRead,BufNewFile Schemafile set filetype=ruby
+
+
+" Go
+"--------------------------------------------------
+autocmd FileType go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " HTML
 "--------------------------------------------------
