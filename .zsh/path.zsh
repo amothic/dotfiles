@@ -52,6 +52,7 @@ fi
 
 MY_GO="$HOME/go"
 if [ -d $MY_GO ]; then
+    export GOPATH=$MY_GO
     path=(
     $MY_GO/bin(N-/)
     $path

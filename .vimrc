@@ -241,6 +241,12 @@ autocmd FileType eruby setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd BufRead,BufNewFile Schemafile set filetype=ruby
 
 
+" Perl
+"--------------------------------------------------
+
+" Perlの場合タブ幅を4にする
+autocmd FileType perl setlocal tabstop=4 shiftwidth=4 expandtab
+
 " Go
 "--------------------------------------------------
 autocmd FileType go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
