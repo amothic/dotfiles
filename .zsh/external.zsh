@@ -13,6 +13,8 @@ if [ -x `which brew` ] && [ -r $MY_Z ]; then
     source $MY_Z
 fi
 
+export CLOUDSDK_PYTHON=$(which python3)
+
 # The next paragraph updates PATH for the Google Cloud SDK.
 MY_GCLOUD=~/google-cloud-sdk/path.zsh.inc
 if [ -f $MY_GCLOUD ]; then
