@@ -31,31 +31,12 @@ if [ -d $MY_RBENV ]; then
     eval "$(rbenv init -)"
 fi
 
-MY_NDENV="$HOME/.ndenv"
-if [ -d $MY_NDENV ]; then
+MY_NODE="$HOME/.nodebrew"
+if [ -d $MY_NODE ]; then
     path=(
-    $MY_NDENV/bin(N-/)
+    $MY_NODE/current/bin(N-/)
     $path
     )
-    eval "$(ndenv init -)"
-fi
-
-MY_PLENV="$HOME/.plenv"
-if [ -d $MY_PLENV ]; then
-    path=(
-    $MY_PLENV/bin(N-/)
-    $path
-    )
-    eval "$(plenv init -)"
-fi
-
-MY_PYENV="$HOME/.pyenv"
-if [ -d $MY_PYENV ]; then
-    path=(
-    $MY_PYENV/bin(N-/)
-    $path
-    )
-    eval "$(pyenv init -)"
 fi
 
 MY_GO="$HOME/go"
