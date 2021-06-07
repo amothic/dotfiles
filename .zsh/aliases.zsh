@@ -1,3 +1,4 @@
+alias g='git'
 alias cp='cp -i'
 alias mv='mv -i'
 alias -s hs=runhaskell
