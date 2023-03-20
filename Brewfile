@@ -37,6 +37,5 @@ mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "Magnet", id: 441258766
 mas "OmniFocus", id: 867299399
-mas "OmniGraffle 6", id: 711830901
 mas "Pages", id: 409201541
 mas "Todoist", id: 585829637

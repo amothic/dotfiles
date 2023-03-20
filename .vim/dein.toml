@@ -9,3 +9,6 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'doums/darcula'
+
+[[plugins]]
+repo = 'github/copilot.vim'

@@ -42,3 +42,17 @@ if [ -d $MY_GO ]; then
     $path
     )
 fi
+
+# Dart
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+# fvm
+f="fvm flutter"
+alias flutter='fvm flutter'
+alias dart='fvm dart'
+
+# Poetry
+export PATH="$PATH":"$HOME/.local/bin"
+
+# Java
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
