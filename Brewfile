@@ -15,17 +15,16 @@ brew "tree"
 brew "vim"
 brew "wget"
 brew "z"
+cask "1password"
 cask "alfred"
 cask "docker"
 cask "figma"
 cask "google-backup-and-sync"
 cask "google-cloud-sdk"
-cask "google-japanese-ime"
 cask "iterm2"
 cask "jetbrains-toolbox"
 cask "kindle"
 cask "spotify"
-mas "1Password 7", id: 1333542190
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "Magnet", id: 441258766
