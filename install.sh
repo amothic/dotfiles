@@ -13,6 +13,3 @@ $PWD/vim.sh
 echo "Install Homebrew and Install Apps"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew bundle
-
-echo "iTunes use Japanese"
-defaults write com.apple.iTunes AppleLanguages "(ja)"
