@@ -43,13 +43,17 @@ if [ -d $MY_GO ]; then
     )
 fi
 
+MY_PYTHON="$HOME/.pyenv"
+if [ -d $MY_PYTHON ]; then
+    path=(
+    $MY_PYTHON/bin(N-/)
+    $path
+    )
+    eval "$(pyenv init -)"
+fi
+
 # Dart
 export PATH="$PATH":"$HOME/.pub-cache/bin"
-
-# fvm
-f="fvm flutter"
-alias flutter='fvm flutter'
-alias dart='fvm dart'
 
 # Poetry
 export PATH="$PATH":"$HOME/.local/bin"
