@@ -18,3 +18,5 @@
 	path = ~/.gitconfig.local
 [commit]
 	gpgsign = true
+[init]
+	defaultBranch = main
