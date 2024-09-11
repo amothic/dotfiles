@@ -14,3 +14,8 @@ MY_GCLOUD_COMPLETION=~/google-cloud-sdk/completion.zsh.inc
 if [ -f $MY_GCLOUD_COMPLETION ]; then
     source $MY_GCLOUD_COMPLETION
 fi
+
+# fzf
+if type fzf &> /dev/null; then
+  source <(fzf --zsh)
+fi
