@@ -17,5 +17,7 @@ fi
 
 # fzf
 if type fzf &> /dev/null; then
+  FZF_CTRL_T_COMMAND=
+  FZF_ALT_C_COMMAND=
   source <(fzf --zsh)
 fi
