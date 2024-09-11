@@ -1,6 +1,8 @@
 tap "homebrew/bundle"
 tap "homebrew/services"
 brew "awscli"
+brew "eza"
+brew "genact"
 brew "git"
 brew "gnupg"
 brew "go"
