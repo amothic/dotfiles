@@ -8,6 +8,6 @@ if [ -r ~/.zshrc.local ]; then
   source ~/.zshrc.local
 fi
 
-if command -v starship &> /dev/null; then
+if type starship &> /dev/null; then
   eval "$(starship init zsh)"
 fi

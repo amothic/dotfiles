@@ -26,14 +26,6 @@ if [ -d $MY_RBENV ]; then
     eval "$(rbenv init -)"
 fi
 
-MY_NODE="$HOME/.nodebrew"
-if [ -d $MY_NODE ]; then
-    path=(
-    $MY_NODE/current/bin(N-/)
-    $path
-    )
-fi
-
 MY_GO="$HOME/go"
 if [ -d $MY_GO ]; then
     export GOPATH=$MY_GO

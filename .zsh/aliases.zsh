@@ -1,5 +1,6 @@
 alias cp='cp -i'
 alias mv='mv -i'
+alias tmux='tmux -u'
 
 case "${OSTYPE}" in
     freebsd*|darwin*)
