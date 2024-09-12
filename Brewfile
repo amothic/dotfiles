@@ -32,6 +32,7 @@ cask "google-drive"
 cask "iterm2"
 cask "jetbrains-toolbox"
 cask "kindle"
+cask "rekordbox"
 cask "spotify"
 mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
