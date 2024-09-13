@@ -3,7 +3,6 @@ if type zoxide &> /dev/null; then
   eval "$(zoxide init zsh)"
 fi
 
-
 # google-cloud-sdk
 export CLOUDSDK_PYTHON=$(which python3)
 MY_GCLOUD=~/google-cloud-sdk/path.zsh.inc
