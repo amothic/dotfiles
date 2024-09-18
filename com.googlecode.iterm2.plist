@@ -2076,7 +2076,7 @@
 				<real>0.90196078431372551</real>
 			</dict>
 			<key>Brighten Bold Text</key>
-			<true/>
+			<false/>
 			<key>Character Encoding</key>
 			<integer>4</integer>
 			<key>Close Sessions On End</key>
@@ -2132,6 +2132,8 @@
 			<false/>
 			<key>Disable Window Resizing</key>
 			<true/>
+			<key>Faint Text Alpha</key>
+			<real>0.50210053066037741</real>
 			<key>Flashing Bell</key>
 			<true/>
 			<key>Foreground Color</key>
