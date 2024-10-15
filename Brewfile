@@ -27,7 +27,6 @@ cask "1password"
 cask "alfred"
 cask "caffeine"
 cask "discord"
-cask "docker"
 cask "figma"
 cask "font-jetbrains-mono-nerd-font"
 cask "google-cloud-sdk"
@@ -35,13 +34,11 @@ cask "google-drive"
 cask "iterm2"
 cask "jetbrains-toolbox"
 cask "kindle"
+cask "rancher"
 cask "rekordbox"
 cask "spotify"
 mas "GarageBand", id: 682658836
-mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "Magnet", id: 441258766
-mas "Numbers", id: 409203825
 mas "OmniGraffle", id: 1142578753
-mas "Pages", id: 409201541
 mas "Todoist", id: 585829637

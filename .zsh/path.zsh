@@ -45,10 +45,37 @@ if [ -d $MY_PYTHON ]; then
 fi
 
 # Dart
-export PATH="$PATH":"$HOME/.pub-cache/bin"
+MY_DART="$HOME/.pub-cache/bin"
+if [ -d $MY_DART ]; then
+    path=(
+    $MY_DART(N-/)
+    $path
+    )
+fi
 
 # Poetry
-export PATH="$PATH":"$HOME/.local/bin"
+MY_POETRY="$HOME/.local/bin"
+if [ -d $MY_POETRY ]; then
+    path=(
+    $MY_POETRY(N-/)
+    $path
+    )
+fi
 
 # Java
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+MY_JAVA="/opt/homebrew/opt/openjdk/bin"
+if [ -d $MY_JAVA ]; then
+    path=(
+    $MY_JAVA(N-/)
+    $path
+    )
+fi
+
+# Docker (Rancher Desktop)
+MY_DOCKER="$HOME/.rd/bin"
+if [ -d $MY_DOCKER ]; then
+    path=(
+    $MY_DOCKER(N-/)
+    $path
+    )
+fi
