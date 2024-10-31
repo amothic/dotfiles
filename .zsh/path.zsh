@@ -14,8 +14,15 @@ sudo_path=(
 /usr/local/sbin(N-/)
 )
 
-# Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Packages
+if [ -d /opt/homebrew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# Languages
+if type anyenv &> /dev/null; then
+  eval "$(anyenv init -)"
+fi
 
 MY_RBENV="$HOME/.rbenv"
 if [ -d $MY_RBENV ]; then
