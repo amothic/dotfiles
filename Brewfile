@@ -38,6 +38,7 @@ cask "kindle"
 cask "rekordbox"
 cask "spotify"
 mas "GarageBand", id: 682658836
+mas "Kindle", id: 302584613
 mas "LINE", id: 539883307
 mas "Magnet", id: 441258766
 mas "OmniGraffle", id: 1142578753
