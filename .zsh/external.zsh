@@ -21,8 +21,12 @@ if type fzf &> /dev/null; then
   source <(fzf --zsh)
 fi
 
+is_in_vscode() {
+  [[ -n $VSCODE_PID || "$TERM_PROGRAM" == "vscode" ]]
+}
+
 # tmux
-if [[ ! -n $TMUX  ]]; then
+if [[ ! -n $TMUX ]] && ! is_in_vscode; then
   # Get the session IDs
   session_ids="$(tmux list-sessions)"
 
