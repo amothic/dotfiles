@@ -25,8 +25,12 @@ is_in_vscode() {
   [[ -n $VSCODE_PID || "$TERM_PROGRAM" == "vscode" ]]
 }
 
+is_in_intellij() {
+  [[ "$TERMINAL_EMULATOR" == "JetBrains-JediTerm" ]]
+}
+
 # tmux
-if [[ ! -n $TMUX ]] && ! is_in_vscode; then
+if [[ ! -n $TMUX ]] && ! is_in_vscode && ! is_in_intellij; then
   # Get the session IDs
   session_ids="$(tmux list-sessions)"
 
