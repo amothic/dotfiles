@@ -24,15 +24,6 @@ if type anyenv &> /dev/null; then
   eval "$(anyenv init -)"
 fi
 
-MY_RBENV="$HOME/.rbenv"
-if [ -d $MY_RBENV ]; then
-    path=(
-    $MY_RBENV/bin(N-/)
-    $path
-    )
-    eval "$(rbenv init -)"
-fi
-
 MY_GO="$HOME/go"
 if [ -d $MY_GO ]; then
     export GOPATH=$MY_GO
@@ -40,15 +31,6 @@ if [ -d $MY_GO ]; then
     $MY_GO/bin(N-/)
     $path
     )
-fi
-
-MY_PYTHON="$HOME/.pyenv"
-if [ -d $MY_PYTHON ]; then
-    path=(
-    $MY_PYTHON/bin(N-/)
-    $path
-    )
-    eval "$(pyenv init -)"
 fi
 
 # Dart
