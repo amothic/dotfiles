@@ -14,9 +14,26 @@
 	ui = auto
 [push]
 	default = simple
+	autoSetupRemote = true
+	followTags = true
 [include]
 	path = ~/.gitconfig.local
 [commit]
 	gpgsign = true
 [init]
 	defaultBranch = main
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[rebase]
+	updateRefs = true
