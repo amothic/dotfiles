@@ -3,7 +3,7 @@
 	email = amothic@gmail.com
 [core]
 	autocrlf = input
-	safecrlf = true
+	safecrlf = warn
 	editor = vim
 	excludesfile = ~/.gitignore.global
 [alias]
@@ -37,3 +37,8 @@
 	all = true
 [rebase]
 	updateRefs = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
