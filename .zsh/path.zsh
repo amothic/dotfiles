@@ -20,6 +20,14 @@ if [ -d /opt/homebrew ]; then
 fi
 
 # Languages
+MY_ASDF="$HOME/.asdf"
+if [ -d $MY_ASDF ]; then
+    path=(
+    $MY_ASDF/shims(N-/)
+    $path
+    )
+fi
+
 if type anyenv &> /dev/null; then
   eval "$(anyenv init -)"
 fi
@@ -56,15 +64,6 @@ MY_JAVA="/opt/homebrew/opt/openjdk/bin"
 if [ -d $MY_JAVA ]; then
     path=(
     $MY_JAVA(N-/)
-    $path
-    )
-fi
-
-# Docker (Rancher Desktop)
-MY_DOCKER="$HOME/.rd/bin"
-if [ -d $MY_DOCKER ]; then
-    path=(
-    $MY_DOCKER(N-/)
     $path
     )
 fi
