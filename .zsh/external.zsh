@@ -59,3 +59,8 @@ if [[ ! -n $TMUX ]] && ! is_in_vscode && ! is_in_intellij; then
     :
   fi
 fi
+
+# iTerm2
+if [ -e "${HOME}/.iterm2_shell_integration.zsh" ]; then
+  source "${HOME}/.iterm2_shell_integration.zsh"
+fi
