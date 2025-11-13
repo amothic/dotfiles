@@ -2,7 +2,7 @@
 
 # fpath setup (before compinit)
 # asdf
-fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+fpath=($HOME/.asdf/completions $fpath)
 
 # initialize completions
 autoload -Uz compinit
