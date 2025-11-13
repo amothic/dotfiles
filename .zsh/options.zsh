@@ -1,6 +1,3 @@
-autoload -Uz compinit
-compinit
-
 bindkey -e
 
 setopt auto_pushd

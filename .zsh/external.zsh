@@ -9,10 +9,6 @@ MY_GCLOUD=/opt/homebrew/share/google-cloud-sdk/path.zsh.inc
 if [ -f $MY_GCLOUD ]; then
   source $MY_GCLOUD
 fi
-MY_GCLOUD_COMPLETION=/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc
-if [ -f $MY_GCLOUD_COMPLETION ]; then
-  source $MY_GCLOUD_COMPLETION
-fi
 
 # fzf
 if type fzf &> /dev/null; then
