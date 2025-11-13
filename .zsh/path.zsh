@@ -27,9 +27,3 @@ if [ -d $MY_ASDF ]; then
     $path
     )
 fi
-
-# google-cloud-sdk
-MY_GCLOUD=/opt/homebrew/share/google-cloud-sdk/path.zsh.inc
-if [ -f $MY_GCLOUD ]; then
-  source $MY_GCLOUD
-fi
