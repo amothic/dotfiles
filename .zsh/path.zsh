@@ -27,3 +27,10 @@ if [ -d $MY_ASDF ]; then
     $path
     )
 fi
+
+# google-cloud-sdk
+export CLOUDSDK_PYTHON=$(which python3)
+MY_GCLOUD=/opt/homebrew/share/google-cloud-sdk/path.zsh.inc
+if [ -f $MY_GCLOUD ]; then
+  source $MY_GCLOUD
+fi

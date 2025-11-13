@@ -3,13 +3,6 @@ if type zoxide &> /dev/null; then
   eval "$(zoxide init zsh)"
 fi
 
-# google-cloud-sdk
-export CLOUDSDK_PYTHON=$(which python3)
-MY_GCLOUD=/opt/homebrew/share/google-cloud-sdk/path.zsh.inc
-if [ -f $MY_GCLOUD ]; then
-  source $MY_GCLOUD
-fi
-
 # fzf
 if type fzf &> /dev/null; then
   FZF_CTRL_T_COMMAND=
