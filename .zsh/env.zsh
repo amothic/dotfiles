@@ -7,6 +7,10 @@ if type starship &> /dev/null; then
   eval "$(starship init zsh)"
 fi
 
+# Environment variables
+# google-cloud-sdk
+export CLOUDSDK_PYTHON=$(which python3)
+
 # History
 HISTFILE=~/.zsh_history
 HISTSIZE=10000000
