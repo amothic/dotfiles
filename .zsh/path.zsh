@@ -28,10 +28,6 @@ if [ -d $MY_ASDF ]; then
     )
 fi
 
-if type anyenv &> /dev/null; then
-  eval "$(anyenv init -)"
-fi
-
 MY_GO="$HOME/go"
 if [ -d $MY_GO ]; then
     export GOPATH=$MY_GO

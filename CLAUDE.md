@@ -38,7 +38,7 @@ brew bundle dump --force
 │   ├── aliases.zsh     # エイリアス定義
 │   ├── functions.zsh   # カスタム関数
 │   ├── external.zsh    # 外部ツール統合（tmux自動起動、fzf、zoxideなど）
-│   └── path.zsh        # PATH設定（asdf、anyenv、Go、Dart、Poetryなど）
+│   └── path.zsh        # PATH設定（asdf、Go、Dart、Poetryなど）
 ├── .config/            # XDG Base Directory対応の設定
 │   ├── sheldon/        # Zshプラグインマネージャー
 │   └── starship.toml   # Starshipプロンプト設定
@@ -60,7 +60,6 @@ brew bundle dump --force
 3. **PATH管理**: `.zsh/path.zsh`で言語環境とツールのPATH設定を集中管理：
    - Homebrew (`/opt/homebrew`)
    - ASDF (shimsを優先PATH)
-   - anyenv
    - Go (`$HOME/go/bin`)
    - Dart (`$HOME/.pub-cache/bin`)
    - Poetry (`$HOME/.local/bin`)
