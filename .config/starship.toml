@@ -1,5 +1,8 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# asdf経由のコマンドが遅いためタイムアウトを増やす
+command_timeout = 1000
+
 [git_branch]
 symbol = ''
 format = '\([$symbol$branch(:$remote_branch)]($style)\) '
