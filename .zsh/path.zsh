@@ -27,3 +27,9 @@ if [ -d $MY_ASDF ]; then
     $path
     )
 fi
+
+# Dart pub global packages
+path=(
+  $HOME/.pub-cache/bin(N-/)
+  $path
+)
