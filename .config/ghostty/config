@@ -1,2 +1,4 @@
 window-height = 55
 window-width = 200
+
+keybind = shift+enter=text:\x1b\r

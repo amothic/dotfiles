@@ -18,8 +18,12 @@ is_in_intellij() {
   [[ "$TERMINAL_EMULATOR" == "JetBrains-JediTerm" ]]
 }
 
+is_in_claude_code() {
+  [[ -n $CLAUDECODE ]]
+}
+
 # tmux
-if [[ ! -n $TMUX ]] && ! is_in_vscode && ! is_in_intellij; then
+if [[ ! -n $TMUX ]] && ! is_in_vscode && ! is_in_intellij && ! is_in_claude_code; then
   # Get the session IDs
   session_ids="$(tmux list-sessions)"
 
