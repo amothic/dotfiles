@@ -2,7 +2,6 @@ tap "bufbuild/buf"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
-tap "leoafarias/fvm"
 brew "git"
 brew "asdf"
 brew "awscli"
@@ -32,7 +31,6 @@ brew "vim"
 brew "wget"
 brew "zoxide"
 brew "bufbuild/buf/buf"
-brew "leoafarias/fvm/fvm"
 cask "1password"
 cask "alfred"
 cask "caffeine"
@@ -42,15 +40,22 @@ cask "docker-desktop"
 cask "figma"
 cask "font-jetbrains-mono-nerd-font"
 cask "gcloud-cli"
+cask "ghostty"
 cask "google-drive"
 cask "iterm2"
 cask "jetbrains-toolbox"
+cask "notion"
 cask "rekordbox"
 cask "spotify"
 cask "visual-studio-code"
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
 mas "Kindle", id: 302584613
 mas "LINE", id: 539883307
 mas "Magnet", id: 441258766
+mas "Numbers", id: 409203825
 mas "OmniGraffle", id: 1142578753
+mas "Pages", id: 409201541
 mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835
