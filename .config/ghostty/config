@@ -1,6 +1,7 @@
 window-height = 55
 window-width = 200
 
+font-family = "JetBrainsMonoNL Nerd Font Mono"
 font-size = 12
 
 keybind = shift+enter=text:\x1b\r
