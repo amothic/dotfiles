@@ -40,6 +40,7 @@ brew bundle dump --force
 │   ├── external.zsh    # 外部ツール統合（tmux自動起動、fzf、zoxideなど）
 │   └── path.zsh        # PATH設定（asdf、Go、Dart、Poetryなど）
 ├── .config/            # XDG Base Directory対応の設定
+│   ├── ghostty/        # Ghosttyターミナル設定
 │   ├── sheldon/        # Zshプラグインマネージャー
 │   └── starship.toml   # Starshipプロンプト設定
 ├── .claude/            # Claude Code設定
@@ -49,10 +50,13 @@ brew bundle dump --force
 │   └── commands/           # カスタムスラッシュコマンド
 ├── .vim/               # Vim関連（dein.vimでプラグイン管理）
 ├── Brewfile            # Homebrew管理のパッケージリスト
+├── .zshenv             # 環境変数（.zshrcより先に読み込まれる）
 ├── .zshrc              # Zshメインエントリーポイント（.zsh/*を読み込む）
 ├── .vimrc              # Vim設定
+├── .ideavimrc          # IntelliJ IdeaVim設定
 ├── .tmux.conf          # tmux設定
-└── .gitconfig          # Git設定
+├── .gitconfig          # Git設定
+└── .gitignore.global   # グローバルgitignore
 ```
 
 ### Key Design Patterns
