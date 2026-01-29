@@ -42,6 +42,11 @@ brew bundle dump --force
 ├── .config/            # XDG Base Directory対応の設定
 │   ├── sheldon/        # Zshプラグインマネージャー
 │   └── starship.toml   # Starshipプロンプト設定
+├── .claude/            # Claude Code設定
+│   ├── settings.json       # グローバル設定
+│   ├── settings.local.json # ローカル設定（gitignore対象）
+│   ├── keybindings.json    # キーバインド設定
+│   └── commands/           # カスタムスラッシュコマンド
 ├── .vim/               # Vim関連（dein.vimでプラグイン管理）
 ├── Brewfile            # Homebrew管理のパッケージリスト
 ├── .zshrc              # Zshメインエントリーポイント（.zsh/*を読み込む）
@@ -76,6 +81,10 @@ brew bundle dump --force
 - 自動セットアップ: `push.autoSetupRemote = true`
 - LFS有効化
 - ブランチソート: コミット日時順（`-committerdate`）
+
+## Claude Code Configuration
+
+`.claude/`ディレクトリでClaude Codeの設定を管理しています。`~/.claude/`へシンボリックリンクされます。
 
 ## Important Notes
 
