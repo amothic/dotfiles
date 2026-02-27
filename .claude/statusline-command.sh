@@ -1,13 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-# =============================================================================
-# 定数定義
-# =============================================================================
-readonly SYSTEM_OVERHEAD=20000
-readonly AUTOCOMPACT_BUFFER=45000
-readonly CONTEXT_LIMIT=200000
-
 # カラー定義
 readonly COLOR_GREEN="\033[32m"
 readonly COLOR_YELLOW="\033[33m"
@@ -28,35 +21,16 @@ input=$(cat)
 # 一般的な抽出用のヘルパー関数
 get_model_name() { echo "$input" | jq -r '.model.display_name // "unknown"'; }
 get_current_dir() { echo "$input" | jq -r '.workspace.current_dir'; }
-get_transcript_path() { echo "$input" | jq -r '.transcript_path // ""'; }
 
-# トークン使用量を計算するヘルパー関数
 get_tokens_used() {
-  local message_tokens=0
-  local transcript_path
-  transcript_path=$(get_transcript_path)
-
-  if [ -n "$transcript_path" ] && [ -f "$transcript_path" ]; then
-    # 最後のusageを持つメッセージをjqで取得し、トークン合計を計算
-    message_tokens=$(tail -50 "$transcript_path" 2>/dev/null | \
-      jq -s '[.[] | select(.message.usage)] | last | .message.usage // {} |
-        ((.input_tokens // 0) + (.cache_creation_input_tokens // 0) + (.cache_read_input_tokens // 0) + (.output_tokens // 0))' 2>/dev/null || echo 0)
-    # 数値でない場合のフォールバック
-    [[ ! "$message_tokens" =~ ^[0-9]+$ ]] && message_tokens=0
-  fi
-
-  # セッション開始時、message_tokensが0の場合はSYSTEM_OVERHEADを加算
-  if [ "$message_tokens" -eq 0 ]; then
-    echo $((SYSTEM_OVERHEAD + AUTOCOMPACT_BUFFER))
-  else
-    echo $((message_tokens + AUTOCOMPACT_BUFFER))
-  fi
+  echo "$input" | jq '
+    .context_window.current_usage // {} |
+    ((.input_tokens // 0) + (.cache_creation_input_tokens // 0) + (.cache_read_input_tokens // 0) + (.output_tokens // 0))
+  ' 2>/dev/null || echo 0
 }
 
-# コンテキスト使用率を計算するヘルパー関数
 get_usage_percent() {
-  local tokens_used=$1
-  echo $((tokens_used * 100 / CONTEXT_LIMIT))
+  echo "$input" | jq '.context_window.used_percentage // 0 | floor' 2>/dev/null || echo 0
 }
 
 # トークン数をk形式でフォーマットするヘルパー関数
@@ -98,7 +72,7 @@ model=$(get_model_name)
 current_dir=$(get_current_dir)
 tokens_used=$(get_tokens_used)
 tokens_display=$(format_tokens "$tokens_used")
-usage_percent=$(get_usage_percent "$tokens_used")
+usage_percent=$(get_usage_percent)
 context_color=$(get_context_color "$usage_percent")
 git_branch=$(get_git_branch)
 
