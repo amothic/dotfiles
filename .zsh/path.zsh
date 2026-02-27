@@ -33,3 +33,9 @@ path=(
   $HOME/.pub-cache/bin(N-/)
   $path
 )
+
+# Local bin
+path=(
+  $HOME/.local/bin(N-/)
+  $path
+)
