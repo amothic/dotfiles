@@ -67,21 +67,22 @@ get_git_branch() {
 # メイン処理
 # =============================================================================
 
-# ヘルパーを使用して最終出力用の変数を設定
 model=$(get_model_name)
 current_dir=$(get_current_dir)
 tokens_used=$(get_tokens_used)
-tokens_display=$(format_tokens "$tokens_used")
-usage_percent=$(get_usage_percent)
-context_color=$(get_context_color "$usage_percent")
 git_branch=$(get_git_branch)
 
 # 出力を構築
-dir_display="${COLOR_CYAN} ${current_dir##*/}${COLOR_RESET}"
+dir_display="${COLOR_CYAN} ${current_dir##*/}${COLOR_RESET}"
 if [ -n "$git_branch" ]; then
   dir_display="$dir_display (${COLOR_MAGENTA}$git_branch${COLOR_RESET})"
 fi
-usage_display="${context_color}${usage_percent}%${COLOR_RESET}"
 
-output="[$model] $dir_display | $tokens_display ($usage_display)"
+output="[$model] $dir_display"
+if [ "$tokens_used" -gt 0 ]; then
+  tokens_display=$(format_tokens "$tokens_used")
+  usage_percent=$(get_usage_percent)
+  context_color=$(get_context_color "$usage_percent")
+  output="$output | $tokens_display (${context_color}${usage_percent}%${COLOR_RESET})"
+fi
 echo -e "$output"
