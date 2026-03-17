@@ -5,7 +5,9 @@
     "type": "command",
     "command": "bash ~/.claude/statusline-command.sh"
   },
-  "enabledPlugins": {},
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true
+  },
   "language": "日本語",
   "defaultMode": "acceptEdits",
   "feedbackSurveyState": {
